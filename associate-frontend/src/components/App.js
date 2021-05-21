@@ -21,6 +21,7 @@ function App() {
     <div className="App">
       <div className="navbar">
         {user ? <h1>{user.name}'s Associate</h1> : <h1>Associate</h1>}
+        {/* <div className="menu"></div> */}
       </div>
       <div className="grid-container">
         <div className="column">

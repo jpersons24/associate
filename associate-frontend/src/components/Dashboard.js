@@ -6,7 +6,7 @@ import Assessment from './Assessment';
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h3>This will be the dashboard component</h3>
+      <h3>dashboard</h3>
       <Billboard />
       <ResourceContainer />
       <Assessment />

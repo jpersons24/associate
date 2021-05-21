@@ -6,7 +6,7 @@
   display: flex;
 }
 
-/* ******* initial grid setup ********* */
+/* ************* initial grid setup *********** */
 
 .grid-container {
   display: grid;
@@ -17,13 +17,14 @@
     ". .";
 }
 
-/* ******* navbar ********* */
+/* ************** navbar ************** */
 
 .navbar {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-/* ******* directory ********* */
+/* ************* directory *************** */
 
 .directory {
   width: auto;
@@ -38,7 +39,7 @@
 }
 
 
-/* ******* dashboard ********* */
+/* ************** dashboard ************ */
 
 .dashboard {
   width: auto;
@@ -48,16 +49,35 @@
   border-radius: 10px;
 }
 
-/* ******* billboard ********* */
-
-.billboard {
-  border-top: 2px dotted black;
+.dashboard h3 {
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/* ******* resource container ********* */
+/* ************ billboard ************** */
+
+.billboard {
+  margin: 3px 0;
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+
+.billboard h4 {
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* ************** resource container ************** */
 
 .resource {
+  margin: 3px 0;
   border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+
+.resource h4 {
+  margin: 10px 0;
+  text-transform: uppercase;
 }
 
 .resource .grid-container {
@@ -67,18 +87,40 @@
   gap: 0px 5px;
   grid-template-areas:
     ". .";
+  margin-bottom: 10px;
 }
 
-.resource .grid-container .column {
+.data-column {
   text-align: center;
   border-right: 2px dotted black;
+}
+
+.resource-column {
+  text-align: center;
   border-left: 2px dotted black;
 }
 
+/* ************ resource card ************** */
 
-/* ******* resource container ********* */
+.resource-card h4 {
+  text-transform: uppercase;
+}
 
+/* ************** data ************** */
+
+.data h4 {
+  text-transform: uppercase;
+}
+
+/* ************ assessment container ************** */
 
 .assessment {
+  margin: 3px 0;
   border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+
+.assessment h4 {
+  margin: 10px 0;
+  text-transform: uppercase;
 }

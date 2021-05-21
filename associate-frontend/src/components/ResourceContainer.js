@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Data from './Data';
+import ResourceCard from './ResourceCard';
 
 const ResourceContainer = () => {
   return (
 		<div className="resource">
-			<h6>resource container</h6>
+			<h4>resource container</h4>
 			<div className="grid-container">
-				<div className="column">
-					<p>data display</p>
+				<div className="data-column">
+					<Data />
 				</div>
-				<div className="column">
-					<p>resource card</p>
+				<div className="resource-column">
+					<ResourceCard />
 				</div>
 			</div>
 		</div>
