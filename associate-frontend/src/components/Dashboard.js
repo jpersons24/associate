@@ -1,7 +1,7 @@
 import React from 'react';
 import Billboard from './Billboard';
 import ResourceContainer from './ResourceContainer';
-import Assessment from './Assessment';
+import AssessmentCenter from './AssessmentCenter';
 
 const Dashboard = () => {
   return (
@@ -9,7 +9,7 @@ const Dashboard = () => {
       <h3>dashboard</h3>
       <Billboard />
       <ResourceContainer />
-      <Assessment />
+      <AssessmentCenter />
     </div>
   )
 }

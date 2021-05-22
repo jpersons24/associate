@@ -1,46 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Assessment = () => {
 
-	const [formData, setFormData] = useState({
-		reflection: "",
-		date: ""
-	})
-	console.log(formData)
+  const [formData, setFormData] = useState({
+    date: "",
+    assessment: "",
+  })
 
-	function reflectionChange(e) {
-		setFormData({ ...formData, [e.target.name]: e.target.value})
-	}
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value})
+    console.log(formData)
+  }
 
+  function handleSubmit(e) {
+    e.preventDefault()
+  }
 
   return (
 		<div className="assessment">
-			<h4>Assessment Center</h4>
-			<ul>
-				<li>Reflection</li>
-				<li>Assess</li>
-				<li>Adjustments</li>
-				<li>Actions</li>
-			</ul>
-			<div className="form-container">
-				<form className="reflection-form">
-					<label>Date</label>
+			<div className="assessment-form">
+				<h5>Weekly Assessment</h5>
+				<form onSubmit={handleSubmit}>
+					<label>Date: </label>
 					<input
 						type="date"
 						name="date"
 						value={formData.date}
-						onChange={reflectionChange}
+						onChange={handleChange}
 					/>
-					<label>Weekly Reflection: </label>
+					<br></br>
 					<input
 						type="text"
-						name="reflection"
-						value={formData.reflection}
-						onChange={reflectionChange}
+						name="assessment"
+						value={formData.assessment}
+						onChange={handleChange}
 					/>
+					<br></br>
 					<input type="submit" />
 				</form>
-				<p>Assessment form will go here</p>
 			</div>
 		</div>
 	);

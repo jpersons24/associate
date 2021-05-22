@@ -114,13 +114,25 @@
 
 /* ************ assessment container ************** */
 
-.assessment {
+.assessment-center {
   margin: 3px 0;
   border-top: 2px dotted black;
   border-bottom: 2px dotted black;
 }
 
-.assessment h4 {
+.assessment-center h4 {
   margin: 10px 0;
   text-transform: uppercase;
+}
+
+/* ************ reflection form ************** */
+
+.reflection {
+  padding: 10px;
+}
+
+/* ************ assessment form ************** */
+
+.assessment {
+  padding: 10px;
 }
