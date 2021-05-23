@@ -19,11 +19,11 @@ const Reflection = () => {
 
   return (
 		<div className="reflection">
-			<div className="reflection-form">
+			<div className="reflection-container">
 				<h5>Weekly Reflection</h5>
-				<form onSubmit={handleSubmit}>
-					<label>Date:</label>
+				<form className="form" onSubmit={handleSubmit}>
 					<input
+						className="input"
 						type="date"
 						name="date"
 						value={formData.date}
@@ -31,13 +31,14 @@ const Reflection = () => {
 					/>
 					<br></br>
 					<input
+						className="input-box"
 						type="text"
 						name="reflection"
 						value={formData.reflection}
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input type="submit" />
+					<input className="input" type="submit" />
 				</form>
 			</div>
 		</div>

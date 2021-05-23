@@ -18,11 +18,11 @@ const Assessment = () => {
 
   return (
 		<div className="assessment">
-			<div className="assessment-form">
+			<div className="assessment-container">
 				<h5>Weekly Assessment</h5>
-				<form onSubmit={handleSubmit}>
-					<label>Date: </label>
+				<form className="form" onSubmit={handleSubmit}>
 					<input
+						className="input"
 						type="date"
 						name="date"
 						value={formData.date}
@@ -30,13 +30,14 @@ const Assessment = () => {
 					/>
 					<br></br>
 					<input
+						className="input-box"
 						type="text"
 						name="assessment"
 						value={formData.assessment}
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input type="submit" />
+					<input className="input" type="submit" />
 				</form>
 			</div>
 		</div>
