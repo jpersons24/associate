@@ -29,7 +29,7 @@ const Assessment = () => {
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input
+					<textarea
 						className="input-box"
 						type="text"
 						name="assessment"
@@ -37,7 +37,7 @@ const Assessment = () => {
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input className="input" type="submit" />
+					<input className="submit" type="submit" />
 				</form>
 			</div>
 		</div>

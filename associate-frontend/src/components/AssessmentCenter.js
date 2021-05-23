@@ -1,6 +1,7 @@
 import React from 'react'
 import Reflection from './Reflection';
 import Assessment from './Assessment';
+import Adjustment from './Adjustment';
 
 const AssessmentCenter = () => {
 
@@ -11,6 +12,7 @@ const AssessmentCenter = () => {
 			<div className="form-container">
 				<Reflection />
 				<Assessment />
+				<Adjustment />
 			</div>
 		</div>
 	);

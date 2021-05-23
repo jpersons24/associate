@@ -30,7 +30,7 @@ const Reflection = () => {
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input
+					<textarea
 						className="input-box"
 						type="text"
 						name="reflection"
@@ -38,7 +38,7 @@ const Reflection = () => {
 						onChange={handleChange}
 					/>
 					<br></br>
-					<input className="input" type="submit" />
+					<input className="submit" type="submit" />
 				</form>
 			</div>
 		</div>
