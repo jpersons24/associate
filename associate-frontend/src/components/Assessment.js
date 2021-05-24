@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Assessment = () => {
+const Assessment = ({ user }) => {
 
   const [formData, setFormData] = useState({
     date: "",
-    assessment: "",
+    body: "",
   })
 
   function handleChange(e) {
@@ -14,6 +14,31 @@ const Assessment = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
+
+		// create new assessment object
+		const assessment = {
+			body: formData.body,
+			date: formData.date,
+			plan_id: user.plan.id
+		}
+		
+		// POST /assessments
+		fetch("http://localhost:3001/assessments", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(assessment),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				// what to do with reflections after they are submitted
+			});
+
+		// reset input fields
+		setFormData({
+			body: "",
+			date: ""
+		})
   }
 
   return (
@@ -32,8 +57,8 @@ const Assessment = () => {
 					<textarea
 						className="input-box"
 						type="text"
-						name="assessment"
-						value={formData.assessment}
+						name="body"
+						value={formData.body}
 						onChange={handleChange}
 					/>
 					<br></br>

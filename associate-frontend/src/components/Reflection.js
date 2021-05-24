@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-const Reflection = () => {
+const Reflection = ({ user }) => {
 
   const [formData, setFormData] = useState({
-		reflection: "",
+		body: "",
 		date: "",
 	});
 
@@ -14,6 +14,33 @@ const Reflection = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+
+		// create new reflection object
+		const reflection = {
+			body: formData.body,
+			date: formData.date,
+			plan_id: user.plan.id,
+		}
+
+		console.log(reflection)
+
+		// POST /reflections
+		fetch("http://localhost:3001/reflections", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(reflection)
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data)
+			// what to do with reflections after they are submitted
+		})
+
+		// reset input fields
+		setFormData({
+			body: "",
+			date: ""
+		})
 	}
 
 
@@ -33,8 +60,8 @@ const Reflection = () => {
 					<textarea
 						className="input-box"
 						type="text"
-						name="reflection"
-						value={formData.reflection}
+						name="body"
+						value={formData.body}
 						onChange={handleChange}
 					/>
 					<br></br>

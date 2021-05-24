@@ -2,16 +2,21 @@ import React from 'react';
 import Data from './Data';
 import ResourceCard from './ResourceCard';
 
-const ResourceContainer = () => {
+const ResourceContainer = ({ user, appTarget, netTarget }) => {
+
   return (
 		<div className="resource">
 			<h4>resource container</h4>
 			<div className="grid-container">
 				<div className="data-column">
-					<Data />
+					<Data 
+						user={user}
+						appTarget={appTarget}
+						netTarget={netTarget} 
+					/>
 				</div>
 				<div className="resource-column">
-					<ResourceCard />
+					<ResourceCard user={user} />
 				</div>
 			</div>
 		</div>

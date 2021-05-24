@@ -21,7 +21,7 @@
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 
 /* ************* directory *************** */
@@ -40,13 +40,13 @@
   text-transform: uppercase;
 }
 
-.directory-list {
+.list {
   list-style: none;
   font-size: 14px;
   padding-left: 15px;
 }
 
-.directory-list li {
+.list li {
   padding: 2px 0;
 }
 
@@ -139,6 +139,10 @@
   text-transform: uppercase;
 }
 
+.target-container {
+  margin-top: 40px;
+}
+
 /* ************ assessment container ************** */
 
 .assessment-center {
@@ -222,3 +226,10 @@
   height: 20px;
   margin-left: 5px;
 }
+
+.library {
+  margin: 3px 0;
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+  

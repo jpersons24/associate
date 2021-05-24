@@ -3,7 +3,6 @@ import React from 'react'
 const Billboard = () => {
   return (
 		<div className="billboard">
-			<h4>billboard component</h4>
 			<div className="billboard-container">
 				<h5>Purpose:</h5>
 				<p>

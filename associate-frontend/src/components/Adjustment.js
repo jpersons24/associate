@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Adjustment = () => {
+const Adjustment = ({ user, setAppTarget, setNetTarget }) => {
 
   const [formData, setFormData] = useState({
     app_target: "",
@@ -14,6 +14,31 @@ const Adjustment = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
+
+		// create new plan object to send
+		const plan = {
+			app_target: formData.app_target,
+			net_target: formData.net_target,
+			user_id: user.id,
+		}
+
+		// PATCH /plans/:id
+		fetch(`http://localhost:3001/plans/${user.plan.id}`, {
+			method: "PATCH",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(plan),
+		})
+			.then((res) => res.json())
+			.then((plan) => {
+				setAppTarget(plan.app_target)
+				setNetTarget(plan.net_target)
+			});
+
+		// reset input fields
+		setFormData({
+			app_target: "",
+			net_target: "",
+		});
   }
 
 
