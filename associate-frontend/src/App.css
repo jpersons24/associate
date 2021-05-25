@@ -1,4 +1,6 @@
-
+/* #023474 --> ARSENAL BLUE*/
+/* #F00000 --> ARSENAL RED */
+/* #9C824A --> ARSENAL GOLD */
 
 .app {
   width: auto;
@@ -30,8 +32,8 @@
   width: auto;
   margin: 0 7px 0 0;
   padding: 0;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
+  border-top: 2px dotted #023474;
+  border-bottom: 2px dotted #023474;
 }
 
 .directory h3 {
@@ -57,7 +59,7 @@
   width: auto;
   margin: 0 7px;
   padding: 15px;
-  border: 2px solid black;
+  border: 2px solid #023474;
   border-radius: 10px;
 }
 
@@ -70,8 +72,8 @@
 
 .billboard {
   margin: 3px 0;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
+  border-top: 2px dotted #023474;
+  border-bottom: 2px dotted #023474;
 }
 
 .billboard h4 {
@@ -98,8 +100,8 @@
 
 .resource {
   margin: 3px 0;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
+  border-top: 2px dotted #023474;
+  border-bottom: 2px dotted #023474;
 }
 
 .resource h4 {
@@ -119,12 +121,12 @@
 
 .data-column {
   text-align: center;
-  border-right: 2px dotted black;
+  border-right: 2px dotted #023474;
 }
 
 .resource-column {
   text-align: center;
-  border-left: 2px dotted black;
+  border-left: 2px dotted #023474;
 }
 
 /* ************ resource card ************** */
@@ -140,15 +142,33 @@
 }
 
 .target-container {
-  margin-top: 40px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  gap: 0px 5px;
+  grid-template-areas:
+    ". .";
+  margin-bottom: 10px;
+}
+
+.target-container p {
+  padding: 0 !important;
+  margin: 0;
+  font-size: 13px;
+}
+
+.data-form label {
+  font-size: 13px;
+  margin: 0;
 }
 
 /* ************ assessment container ************** */
 
 .assessment-center {
   margin: 3px 0;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
+  border-top: 2px dotted #023474;
+  border-bottom: 2px dotted #023474;
 }
 
 .assessment-center h4 {
@@ -191,7 +211,8 @@
 }
 
 .submit {
-  width: 100px;
+  width: 70px;
+  
 }
 
 .input-box {
@@ -229,7 +250,7 @@
 
 .library {
   margin: 3px 0;
-  border-top: 2px dotted black;
-  border-bottom: 2px dotted black;
+  border-top: 2px dotted #023474;
+  border-bottom: 2px dotted #023474;
 }
   

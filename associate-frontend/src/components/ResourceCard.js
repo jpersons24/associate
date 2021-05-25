@@ -6,7 +6,7 @@ const ResourceCard = ({ user }) => {
 
   return (
 		<div className="resource-card">
-			<h4>Resource Card</h4>
+			<h5>Resource Card</h5>
 			{!user ? null : (
 				<ButtonGroup vertical>
 					<ul className="list">
