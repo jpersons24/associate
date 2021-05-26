@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [user, setUser] = useState(null);
+	console.log("USER:", user);
   const [appTarget, setAppTarget] = useState("");
 	const [netTarget, setNetTarget] = useState("");
 

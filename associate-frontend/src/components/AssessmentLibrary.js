@@ -1,28 +1,31 @@
 import React from 'react'
+// import Tab from "react-bootstrap/Tab";
+// import TabContainer from "react-bootstrap/TabContainer";
+// import TabContent from "react-bootstrap/TabContent";
+// import TabPane from "react-bootstrap/TabPane";
+// import ListGroup from "react-bootstrap/ListGroup";
 
 const AssessmentLibrary = ({ user }) => {
 
-  // console.log(user.reflections)
-  // console.log(user.assessments)
-
-  // const reflections = user.reflections.map((reflection) => {
-  //   console.log(reflection)
-  //   return (
-  //     <div>
-  //       <h6>{reflection.date}</h6>
-  //     </div>
-  //   )
-  // })
+  console.log(user)
 
   return (
-    <div className="library">
-      <div className="library-container">
-        <h4>Reflection and Assessment Library</h4>
-        <p>Reflections and assessments should be visible here. Ordered by date and conditionally rendered with state and button to display.</p>
-        <p>Use list group from react bootstrap?!?!</p>
-      </div>
-    </div>
-  )
+		<div className="library">
+			<div className="library-container">
+				<div class="tab-list">
+					<p>dates here</p>
+				</div>
+				<div class="dates">Date</div>
+				<div class="library-title">
+					<p>Reflections / Assessments</p>
+				</div>
+				<div class="library-content">
+					<p>content here</p>
+					
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default AssessmentLibrary;

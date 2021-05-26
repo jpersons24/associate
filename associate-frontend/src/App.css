@@ -164,6 +164,12 @@
   justify-content: center;
 }
 
+.data-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .data-form label {
   font-size: 13px;
   margin: 0;
@@ -264,4 +270,22 @@
   border-top: 2px dotted #9C824A;
   border-bottom: 2px dotted #9C824A;
 }
+
+.library-container {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 20px 5px;
+}
+
+.tab-list { grid-area: 2 / 1 / 3 / 2; }
+
+.dates { grid-area: 1 / 1 / 3 / 2; }
+
+.library-title { grid-area: 1 / 2 / 3 / 3; }
+
+.library-content { grid-area: 2 / 2 / 3 / 3; }
+
+
+
   

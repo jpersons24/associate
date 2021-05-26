@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Data = ({ user, appTarget, netTarget }) => {
-	console.log(user)
+	
 	const [formData, setFormData] = useState({
 		current_app: 0,
 		current_net: 0,
@@ -34,12 +34,12 @@ const Data = ({ user, appTarget, netTarget }) => {
 		})
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
+			console.log('PLAN', data)
 			setCurrApp(data.current_app)
 			setCurrNet(data.current_net)
 		})
 
-		// set current app and net in state
+		// reset form fields?
 	}
 
   return (
@@ -53,7 +53,7 @@ const Data = ({ user, appTarget, netTarget }) => {
 					</p>
 					<p>
 						<em>Current Apps: </em>
-						{!user ? null : <strong>{currApp}</strong>}
+						{!user ? null : <strong>{user.plan.current_app}</strong>}
 					</p>
 					<p>
 						<em>Networking Target: </em>
@@ -61,7 +61,7 @@ const Data = ({ user, appTarget, netTarget }) => {
 					</p>
 					<p>
 						<em>Current Networking: </em>
-						{!user ? null : <strong>{currNet}</strong>}
+						{!user ? null : <strong>{user.plan.current_net}</strong>}
 					</p>
 				</div>
 				<div className="data-form">
@@ -69,24 +69,23 @@ const Data = ({ user, appTarget, netTarget }) => {
 						<label>
 							<em>Add Applications</em>
 						</label>
-						<input 
-							className="num-input" 
-							type="number" 
-							name="current_app" 
+						<input
+							className="num-input"
+							type="number"
+							name="current_app"
 							value={formData.current_app}
 							onChange={handleChange}
 						/>
 						<label>
 							<em>Add Networking</em>
 						</label>
-						<input 
-							className="num-input" 
-							type="number" 
-							name="current_net" 
+						<input
+							className="num-input"
+							type="number"
+							name="current_net"
 							value={formData.current_net}
 							onChange={handleChange}
 						/>
-						<br></br>
 						<input type="submit" className="add" value="Add" />
 					</form>
 				</div>
