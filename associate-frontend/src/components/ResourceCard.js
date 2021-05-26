@@ -12,24 +12,24 @@ const ResourceCard = ({ user }) => {
 					<ul className="list">
 						<li>
 							<Button
-								variant="outline-dark"
+								variant="outline-danger"
 								size="sm"
 								href="https://mail.google.com/mail/u/2/#inbox">
-								{user.email}
+								Gmail
 							</Button>
 						</li>
 						<li>
-							<Button variant="outline-dark" size="sm" href={user.github}>
+							<Button variant="outline-danger" size="sm" href={user.github}>
 								Github
 							</Button>
 						</li>
 						<li>
-							<Button variant="outline-dark" size="sm" href={user.linkedin}>
+							<Button variant="outline-danger" size="sm" href={user.linkedin}>
 								LinkedIn
 							</Button>
 						</li>
 						<li>
-							<Button variant="outline-dark" size="sm" href={user.website}>
+							<Button variant="outline-danger" size="sm" href={user.website}>
 								Portfolio Website
 							</Button>
 						</li>

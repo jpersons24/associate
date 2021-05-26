@@ -19,6 +19,7 @@ const AssessmentLibrary = ({ user }) => {
       <div className="library-container">
         <h4>Reflection and Assessment Library</h4>
         <p>Reflections and assessments should be visible here. Ordered by date and conditionally rendered with state and button to display.</p>
+        <p>Use list group from react bootstrap?!?!</p>
       </div>
     </div>
   )
