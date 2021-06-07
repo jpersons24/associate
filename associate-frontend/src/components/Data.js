@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 
-const Data = ({ user, appTarget, netTarget }) => {
+const Data = ({ user, appTarget, netTarget, currApp, setCurrApp, currNet, setCurrNet }) => {
 	
 	const [formData, setFormData] = useState({
-		current_app: 0,
-		current_net: 0,
+		current_app: currApp,
+		current_net: currNet,
 	})
-	const [currApp, setCurrApp] = useState(0)
-	const [currNet, setCurrNet] = useState(0)
 
 	function handleChange(e) {
 		setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -38,8 +36,6 @@ const Data = ({ user, appTarget, netTarget }) => {
 			setCurrApp(data.current_app)
 			setCurrNet(data.current_net)
 		})
-
-		// reset form fields?
 	}
 
   return (
@@ -52,18 +48,11 @@ const Data = ({ user, appTarget, netTarget }) => {
 						{!user ? null : <strong>{appTarget}</strong>}
 					</p>
 					<p>
-						<em>Current Apps: </em>
-						{!user ? null : <strong>{user.plan.current_app}</strong>}
-					</p>
-					<p>
 						<em>Networking Target: </em>
 						{!user ? null : <strong>{netTarget}</strong>}
 					</p>
-					<p>
-						<em>Current Networking: </em>
-						{!user ? null : <strong>{user.plan.current_net}</strong>}
-					</p>
 				</div>
+				{/* ******************* */}
 				<div className="data-form">
 					<form onSubmit={handleSubmit}>
 						<label>

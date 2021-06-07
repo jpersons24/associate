@@ -3,7 +3,7 @@ import Reflection from './Reflection';
 import Assessment from './Assessment';
 import Adjustment from './Adjustment';
 
-const AssessmentCenter = ({ user, setAppTarget, setNetTarget }) => {
+const AssessmentCenter = ({ user, setAppTarget, setNetTarget, setCurrApp, setCurrNet }) => {
 
   return (
 		<div className="assessment-center">
@@ -11,10 +11,12 @@ const AssessmentCenter = ({ user, setAppTarget, setNetTarget }) => {
 			<div className="form-container">
 				<Reflection user={user} />
 				<Assessment user={user} />
-				<Adjustment 
+				<Adjustment
 					user={user}
 					setAppTarget={setAppTarget}
-					setNetTarget={setNetTarget} 
+					setNetTarget={setNetTarget}
+					setCurrApp={setCurrApp}
+					setCurrNet={setCurrNet}
 				/>
 			</div>
 		</div>

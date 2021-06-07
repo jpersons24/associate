@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Adjustment = ({ user, setAppTarget, setNetTarget }) => {
+const Adjustment = ({ user, setAppTarget, setNetTarget, setCurrApp, setCurrNet }) => {
 
   const [formData, setFormData] = useState({
     app_target: "",
@@ -39,6 +39,10 @@ const Adjustment = ({ user, setAppTarget, setNetTarget }) => {
 			app_target: "",
 			net_target: "",
 		});
+
+		// reset weekly target update fields
+		setCurrApp("")
+		setCurrNet("")
   }
 
 
